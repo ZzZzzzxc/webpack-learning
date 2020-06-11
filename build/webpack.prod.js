@@ -15,6 +15,10 @@ const smp = new SpeedMeasurePlugin();
 const prodConfig = {
   mode: "production",
   plugins: [
+    // 环境变量
+    new webpack.DefinePlugin({
+      PRODUCTION: JSON.stringify(true),
+    }),
     // 体积分析
     new BundleAnalyzerPlugin(),
     // css 压缩
@@ -71,7 +75,10 @@ const prodConfig = {
     minimize: true,
     minimizer: [
       // 多进程压缩
-      new TerserPlugin(),
+      new TerserPlugin({
+        parallel:true,
+        cache:true
+      }),
     ],
   },
   externals: {

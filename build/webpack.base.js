@@ -1,10 +1,10 @@
 const path = require("path");
 // const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 module.exports = {
   // 入口
@@ -21,6 +21,7 @@ module.exports = {
     rules: [
       {
         test: /.js$/,
+        include: path.resolve("src"),
         use: [
           // 多实例构建
           {
@@ -28,13 +29,19 @@ module.exports = {
             options: {
               workers: 2,
               workerParallelJobs: 50,
-              workerNodeArgs: ['--max-old-space-size=1024'],
+              workerNodeArgs: ["--max-old-space-size=1024"],
               poolRespawn: false,
               poolTimeout: 2000,
               poolParallelJobs: 50,
-            }
+            },
           },
-          "babel-loader", // 解析 语法
+          // 解析 语法
+          {
+            loader: "babel-loader",
+            options: {
+              cacheDirectory: true,
+            },
+          },
         ],
       },
       {
@@ -111,21 +118,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name]_[contenthash:8].css",
     }),
-    // html 压缩
-    // new HtmlWebpackPlugin({
-    //   template: path.join(__dirname, "../public/index.html"),
-    //   filename: "index.html",
-    //   chunks: ["app"],
-    //   inject: true,
-    //   minify: {
-    //     html5: true,
-    //     collapseWhitespace: true,
-    //     preserveLineBreaks: false,
-    //     minifyCSS: true,
-    //     minifyJS: true,
-    //     removeComments: false,
-    //   },
-    // }),
+    // 缓存，提升二次构建速度
+    new HardSourceWebpackPlugin(),
     // 自动清理构建目录
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
@@ -137,5 +131,7 @@ module.exports = {
       "@": path.resolve("src"),
       vue$: "vue/dist/vue.esm.js",
     },
+    extensions: [".js"],
+    mainFields: ["main"],
   },
 };

@@ -7,6 +7,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const devConfig = {
   mode: "development",
   plugins: [
+    // 环境变量
+    new webpack.DefinePlugin({
+      PRODUCTION: JSON.stringify(false),
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "../public/index.html"),

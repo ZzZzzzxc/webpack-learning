@@ -51,6 +51,7 @@
     "file-loader": "^6.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "glob": "^7.1.6",
+    "hard-source-webpack-plugin": "^0.13.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "less-loader": "^6.1.0",

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <logo />
-    <div class="hello">{{this.$store.state.title}}</div>
+    <div class="hello">{{ this.$store.state.title }}</div>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     return {};
   },
   mounted() {
-    hello;
+    console.log(hello());
   },
   methods: {},
 };

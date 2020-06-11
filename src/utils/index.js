@@ -1,7 +1,5 @@
 export function hello() {
-  setTimeout(() => {
-    console.log('hello world');
-  }, 3000);
+  return  process.env.NODE_ENV
 }
 
 export default {};

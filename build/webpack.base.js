@@ -22,6 +22,18 @@ module.exports = {
       {
         test: /.js$/,
         use: [
+          // 多实例构建
+          {
+            loader: "thread-loader",
+            options: {
+              workers: 2,
+              workerParallelJobs: 50,
+              workerNodeArgs: ['--max-old-space-size=1024'],
+              poolRespawn: false,
+              poolTimeout: 2000,
+              poolParallelJobs: 50,
+            }
+          },
           "babel-loader", // 解析 语法
         ],
       },
@@ -100,20 +112,20 @@ module.exports = {
       filename: "[name]_[contenthash:8].css",
     }),
     // html 压缩
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "../public/index.html"),
-      filename: "index.html",
-      chunks: ["app"],
-      inject: true,
-      minify: {
-        html5: true,
-        collapseWhitespace: true,
-        preserveLineBreaks: false,
-        minifyCSS: true,
-        minifyJS: true,
-        removeComments: false,
-      },
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: path.join(__dirname, "../public/index.html"),
+    //   filename: "index.html",
+    //   chunks: ["app"],
+    //   inject: true,
+    //   minify: {
+    //     html5: true,
+    //     collapseWhitespace: true,
+    //     preserveLineBreaks: false,
+    //     minifyCSS: true,
+    //     minifyJS: true,
+    //     removeComments: false,
+    //   },
+    // }),
     // 自动清理构建目录
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
@@ -126,5 +138,4 @@ module.exports = {
       vue$: "vue/dist/vue.esm.js",
     },
   },
-  stats: "errors-only",
 };

@@ -1,0 +1,448 @@
+ DONE  Compiled successfully in 3178ms14:28:09
+
+{
+  "errors": [],
+  "warnings": [],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "external \"Vue\"",
+      "name": "external \"Vue\"",
+      "index": 1,
+      "index2": 0,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+      "issuerId": null,
+      "issuerName": "./src/main.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 1,
+      "identifier": "external \"VueRouter\"",
+      "name": "external \"VueRouter\"",
+      "index": 4,
+      "index2": 2,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\router\\index.js",
+      "issuerId": 4,
+      "issuerName": "./src/router/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        },
+        {
+          "id": 4,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\router\\index.js",
+          "name": "./src/router/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 2,
+      "identifier": "external \"Vuex\"",
+      "name": "external \"Vuex\"",
+      "index": 7,
+      "index2": 5,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\store\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/store/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\store\\index.js",
+          "name": "./src/store/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 3,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\runtime\\componentNormalizer.js",
+      "name": "./node_modules/vue-loader/lib/runtime/componentNormalizer.js",
+      "index": 11,
+      "index2": 9,
+      "size": 2771,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\App.vue",
+      "issuerId": null,
+      "issuerName": "./src/App.vue",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\App.vue",
+          "name": "./src/App.vue"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 4,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\router\\index.js",
+      "name": "./src/router/index.js",
+      "index": 2,
+      "index2": 4,
+      "size": 656,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+      "issuerId": null,
+      "issuerName": "./src/main.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 5,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\process\\browser.js",
+      "name": "./node_modules/process/browser.js",
+      "index": 3,
+      "index2": 1,
+      "size": 5081,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\router\\index.js",
+      "issuerId": 4,
+      "issuerName": "./src/router/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        },
+        {
+          "id": 4,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\router\\index.js",
+          "name": "./src/router/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 6,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views lazy /^\\.\\/.*\\.vue$/ groupOptions: {} namespace object",
+      "name": "./src/views lazy ^\\.\\/.*\\.vue$ namespace object",
+      "index": 5,
+      "index2": 3,
+      "size": 160,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\router\\index.js",
+      "issuerId": 4,
+      "issuerName": "./src/router/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        },
+        {
+          "id": 4,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\router\\index.js",
+          "name": "./src/router/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 7,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\postcss-loader\\src\\index.js??ref--2-2!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\px2rem-loader\\index.js??ref--2-3!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\less-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\style\\global.less",
+      "name": "./src/style/global.less",
+      "index": 12,
+      "index2": 12,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+      "issuerId": null,
+      "issuerName": "./src/main.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 8,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js b375950c25488122c733dd8c34601a9f",
+      "name": "./src/main.js + 4 modules",
+      "index": 0,
+      "index2": 13,
+      "size": 1920,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 9,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views\\Home.vue 4a210c9804dc676d0a8ccef7ca58d7cc",
+      "name": "./src/views/Home.vue + 11 modules",
+      "index": 17,
+      "index2": 31,
+      "size": 4734,
+      "cacheable": true,
+      "built": true,
+      "optional": true,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 10,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views\\Error.vue 13ac58585ff4f62293ac01be541292c2",
+      "name": "./src/views/Error.vue + 2 modules",
+      "index": 14,
+      "index2": 16,
+      "size": 1435,
+      "cacheable": true,
+      "built": true,
+      "optional": true,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 11,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\loaders\\stylePostLoader.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\postcss-loader\\src\\index.js??ref--2-2!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\px2rem-loader\\index.js??ref--2-3!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\less-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\components\\logo.vue?vue&type=style&index=0&id=4b16403b&lang=less&scoped=true&",
+      "name": "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--2-2!./node_modules/px2rem-loader??ref--2-3!./node_modules/less-loader/dist/cjs.js!./node_modules/vue-loader/lib??vue-loader-options!./src/components/logo.vue?vue&type=style&index=0&id=4b16403b&lang=less&scoped=true&",
+      "index": 29,
+      "index2": 25,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\loaders\\pitcher.js??ref--4!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\postcss-loader\\src\\index.js??ref--2-2!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\px2rem-loader\\index.js??ref--2-3!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\less-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\components\\logo.vue?vue&type=style&index=0&id=4b16403b&lang=less&scoped=true&",
+      "issuerId": 12,
+      "issuerName": "./src/components/logo.vue?vue&type=style&index=0&id=4b16403b&lang=less&scoped=true&",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        },
+        {
+          "id": 4,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\router\\index.js",
+          "name": "./src/router/index.js"
+        },
+        {
+          "id": 6,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views lazy /^\\.\\/.*\\.vue$/ groupOptions: {} namespace object",
+          "name": "./src/views lazy ^\\.\\/.*\\.vue$ namespace object"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views\\Home.vue",
+          "name": "./src/views/Home.vue"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\loaders\\pitcher.js??ref--4!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views\\Home.vue?vue&type=script&lang=js&",
+          "name": "./src/views/Home.vue?vue&type=script&lang=js&"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views\\Home.vue?vue&type=script&lang=js&",
+          "name": "./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Home.vue?vue&type=script&lang=js&"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\components\\logo.vue",
+          "name": "./src/components/logo.vue"
+        },
+        {
+          "id": 12,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\loaders\\pitcher.js??ref--4!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\postcss-loader\\src\\index.js??ref--2-2!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\px2rem-loader\\index.js??ref--2-3!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\less-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\components\\logo.vue?vue&type=style&index=0&id=4b16403b&lang=less&scoped=true&",
+          "name": "./src/components/logo.vue?vue&type=style&index=0&id=4b16403b&lang=less&scoped=true&"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 12,
+      "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\loaders\\pitcher.js??ref--4!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\postcss-loader\\src\\index.js??ref--2-2!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\px2rem-loader\\index.js??ref--2-3!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\less-loader\\dist\\cjs.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\components\\logo.vue?vue&type=style&index=0&id=4b16403b&lang=less&scoped=true&",
+      "name": "./src/components/logo.vue?vue&type=style&index=0&id=4b16403b&lang=less&scoped=true&",
+      "index": 28,
+      "index2": 26,
+      "size": 948,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\components\\logo.vue",
+      "issuerId": null,
+      "issuerName": "./src/components/logo.vue",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\main.js",
+          "name": "./src/main.js"
+        },
+        {
+          "id": 4,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\router\\index.js",
+          "name": "./src/router/index.js"
+        },
+        {
+          "id": 6,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views lazy /^\\.\\/.*\\.vue$/ groupOptions: {} namespace object",
+          "name": "./src/views lazy ^\\.\\/.*\\.vue$ namespace object"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views\\Home.vue",
+          "name": "./src/views/Home.vue"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\loaders\\pitcher.js??ref--4!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views\\Home.vue?vue&type=script&lang=js&",
+          "name": "./src/views/Home.vue?vue&type=script&lang=js&"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\views\\Home.vue?vue&type=script&lang=js&",
+          "name": "./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Home.vue?vue&type=script&lang=js&"
+        },
+        {
+          "id": null,
+          "identifier": "C:\\Users\\73145\\Desktop\\webpack-learning\\node_modules\\vue-loader\\lib\\index.js??vue-loader-options!C:\\Users\\73145\\Desktop\\webpack-learning\\src\\components\\logo.vue",
+          "name": "./src/components/logo.vue"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "filteredModules": 2,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  }
+}

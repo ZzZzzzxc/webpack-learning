@@ -1,41 +1,46 @@
-// const path = require("path");
+const path = require("path");
 const webpack = require("webpack");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const HtmlWebpackExternalsPlugin = require("html-webpack-externals-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const merge = require("webpack-merge");
 const cssnano = require("cssnano");
 const baseConfig = require("./webpack.base");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+// 构建速度分析，与 html-webpack-externals-plugin 冲突
+const smp = new SpeedMeasurePlugin();
 
 const prodConfig = {
   mode: "production",
   plugins: [
+    // 体积分析
+    new BundleAnalyzerPlugin(),
     // css 压缩
     new OptimizeCSSAssetsPlugin({
       assetNameRegExp: /\.css$/g,
       cssProcessor: cssnano,
     }),
-    // CDN 入口 html 插入 script 标签
-    new HtmlWebpackExternalsPlugin({
-      externals: [
-        {
-          module: "vue",
-          entry: "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
-          global: "Vue",
-        },
-        {
-          module: "vue-router",
-          entry:
-            "https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js",
-          global: "VueRouter",
-        },
-        {
-          module: "vuex",
-          entry: "https://cdn.jsdelivr.net/npm/vuex@3.1.3/dist/vuex.min.js",
-          global: "Vuex",
-        },
+    // html 压缩
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "../public/index.html"),
+      filename: "index.html",
+      chunks: ["app"],
+      inject: true,
+      cdn: [
+        "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
+        "https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js",
+        "https://cdn.jsdelivr.net/npm/vuex@3.1.3/dist/vuex.min.js",
       ],
+      minify: {
+        html5: true,
+        collapseWhitespace: true,
+        preserveLineBreaks: false,
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: false,
+      },
     }),
     // scope hoising
     new webpack.optimize.ModuleConcatenationPlugin(),
@@ -64,8 +69,18 @@ const prodConfig = {
       },
     },
     minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimizer: [
+      // 多进程压缩
+      new TerserPlugin(),
+    ],
+  },
+  externals: {
+    vue: "Vue",
+    "vue-router": "VueRouter",
+    vuex: "Vuex",
   },
 };
 
-module.exports = merge(baseConfig, prodConfig);
+const webpackConfig = smp.wrap(merge(baseConfig, prodConfig));
+
+module.exports = webpackConfig;

@@ -446,4 +446,27 @@ module.exports = {
 
 ### Git
 
-### Lint
+通过使用 `husky` ，我们可以使用 git 的大量钩子，在其中嵌入我们想要执行的动作即可完成 Lint 检查和 commit 信息规范等操作。
+
+commit 信息规范可以使用 `commitlint` 进行配置，语法检查则一般使用 `Eslint` 。
+
+### Changelog
+
+安装 `conventional-changelog-cli` 和 `conventional-changelog` 
+
+创建 `.czrc`
+
+```json
+{ "path": "cz-conventional-changelog" }
+```
+
+然后在 package.json 里面配置命令即可快速使用，
+
+```json
+"scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+```
+
+
+

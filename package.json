@@ -7,7 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./build/webpack.prod.js",
     "dev": "webpack-dev-server --config ./build/webpack.dev.js --open",
-    "build:stats": "webpack --config ./build/webpack.prod.js --json > stats.json"
+    "build:stats": "webpack --config ./build/webpack.prod.js --json > stats.json",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "husky": {
     "hooks": {

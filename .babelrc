@@ -1,9 +1,8 @@
 {
-    "presets": [
-      "@babel/preset-env" // 默认转换所有ECMAScript 2015+代码
-    ],
-    "plugins": [
-      "@babel/plugin-syntax-dynamic-import" // 动态 import ，路由懒加载
-    ]
-  }
-  
+  "presets": [
+    "@babel/preset-env" // 默认转换所有ECMAScript 2015+代码
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import" // 动态 import ，路由懒加载
+  ]
+}

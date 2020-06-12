@@ -122,6 +122,7 @@ module.exports = {
     new HardSourceWebpackPlugin(),
     // 自动清理构建目录
     new CleanWebpackPlugin(),
+    // Vue
     new VueLoaderPlugin(),
     new FriendlyErrorsWebpackPlugin(),
   ],

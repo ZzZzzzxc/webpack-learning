@@ -309,15 +309,138 @@ module.exports = {
 };
 ```
 
+### 打包分析
 
+#### 速度分析
 
-### Tree Shaking
+使用 `speed-measure-webpack-plugin` 插件，即可在控制台打印出各个插件执行花费的时间，帮助开发者分析影响构建速度的因素。
 
-### Scope Hoisting
+```js
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+// 构建速度分析，与 html-webpack-externals-plugin 冲突
+const smp = new SpeedMeasurePlugin();
+const webpackconfig = {}
+smp.wrap( webpackconfig );
+```
+
+不过该插件可能会与部分插件产生冲突，比如 `html-webpack-externals-plugin` ，会导致该插件未能在 html 模板中插入 script 标签。
+
+#### 构建结果分析
+
+当然是选择 `webpack-bundle-analyzer` 插件啦。
+
+```js
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const config = {
+    plugins:[
+        new BundleAnalyzerPlugin(),
+    ]
+}
+```
+
+打包完成之后，该插件会默认启用 8888 端口，以网页的形式输出构建后的文件依赖图。
 
 ### 体积优化
 
+#### Tree Shaking
+
+生产模式下默认已经开启了 Tree Sharking ，用于清理代码中的无用部分，由于 Tree Sharking 只能处理 ES6 模块，而 babel 的preset 会将代码转为 CommonJS 模块。
+
+所以需要在 babel 的配置文件中添加 `modules:false`
+
+```js
+{
+  "presets": [
+    [
+      "@babel/preset-env",// 默认转换所有ECMAScript 2015+代码
+      {
+        "useBuiltIns": "usage",// 按需加载 polyfill
+        "corejs": 3,
+        "modules": false // Tree sharking
+      }
+    ] 
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import" // 动态 import ，路由懒加载
+  ]
+}
+```
+
+#### Scope Hoisting
+
+作用域提升，合并模块的作用域，不仅减小了打包后的体积，也减小了运行时的体积，只需要在插件中引用即可开启。
+
+```js
+const webpack = require("webpack");
+
+const prodConfig = {
+  plugins: [
+    // scope hoising
+    new webpack.optimize.ModuleConcatenationPlugin(),
+  ],
+};
+
+```
+
+#### 抽离基础库
+
+使用 Webpack 提供的 `externals` ，可以将我们不想打包进去的依赖剔除。
+
+```js
+const config = {
+    externals: {
+    	vue: "Vue",
+    	"vue-router": "VueRouter",
+    	vuex: "Vuex",
+  	},
+}
+```
+
+去除了依赖之后，我们可以通过 CDN 的方式进行引入，有两种方式，一是直接在模板 html 中通过 script 标签进行引入，不过这也太呆了，所以我们可以利用 `html-webpack-plugin` 插件，在其配置项中新增一个自定义选型，将我们需要额外引入的依赖 url 存入，然后通过遍历的方式动态引入。
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <% if(htmlWebpackPlugin.options.cdn){ %> <% for(var i in
+    htmlWebpackPlugin.options.cdn){ %>
+    <script src="<%= htmlWebpackPlugin.options.cdn[i] %>"></script>
+    <% } %> <% } %>
+  </body>
+</html>
+```
+
+
+
 ### 性能优化
+
+#### 缩小文件搜索范围
+
+当我们在项目中引入一个依赖的时候， Webpack 会通过递归的方式进行查找，所以可以在 `alias` 选项中配置，直接告诉 Webpack 要到哪里去取对应的依赖，缩小文件的查找范围。
+
+#### 多进程并行处理
+
+使用 `terser-webpack-plugin` 插件，在 `optimization` 的 `minimizer` 配置下引入插件，开启多进程并行 压缩代码。
+
+```js
+const TerserPlugin = require('terser-webpack-plugin');
+ 
+module.exports = {
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
+};
+```
+
+#### 缓存
+
+使用 `hard-source-webpack-plugin` 插件开启缓存，大多数的 loader 也已经内置了缓存开关。
 
 ## 流程规范
 

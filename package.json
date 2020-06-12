@@ -17,7 +17,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm build",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -33,6 +32,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/polyfill": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
@@ -43,6 +43,7 @@
     "commitizen": "^4.1.2",
     "commitlint-config-cz": "^0.13.1",
     "conventional-changelog": "^3.1.21",
+    "core-js": "^3.6.5",
     "css-loader": "^3.5.3",
     "cssnano": "^4.1.10",
     "cz-conventional-changelog": "^3.2.0",

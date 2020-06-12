@@ -1,6 +1,13 @@
 {
   "presets": [
-    "@babel/preset-env" // 默认转换所有ECMAScript 2015+代码
+    [
+      "@babel/preset-env",// 默认转换所有ECMAScript 2015+代码
+      {
+        "useBuiltIns": "usage",// 按需加载 polyfill
+        "corejs": 3,
+        "modules": false // Tree sharking
+      }
+    ] 
   ],
   "plugins": [
     "@babel/plugin-syntax-dynamic-import" // 动态 import ，路由懒加载
